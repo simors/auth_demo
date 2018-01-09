@@ -4,6 +4,17 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var LYAUTH = require('lvyii_auth')
+var callbackFuncs = require('./users')
+
+const appInfo = {
+  secret: 'kuiox2sExuYy3lXzTWdef2lCuiw3IKEF',
+  fetchUserById: callbackFuncs.getUserById,
+  loginWithMobilePhone: callbackFuncs.loginWithMobilephone,
+  loginWithUsername: callbackFuncs.loginWithUsername
+};
+
+LYAUTH.init(appInfo);
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -21,6 +32,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(LYAUTH.express())
 
 app.use('/', index);
 app.use('/users', users);
