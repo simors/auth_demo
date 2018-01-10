@@ -411,16 +411,21 @@ longest@^1.0.1:
   version "1.0.1"
   resolved "http://registry.npm.taobao.org/longest/download/longest-1.0.1.tgz#30a0b2da38f73770e8294a0d22e6625ed77d0097"
 
-lvyii_auth@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.npmjs.org/lvyii_auth/-/lvyii_auth-0.0.1.tgz#7b2dc1ec02700f98c523cd5607a74753796a0442"
+lvyii_auth@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.npmjs.org/lvyii_auth/-/lvyii_auth-0.0.2.tgz#e205721072b289a347906736fdef116ca14d546b"
   dependencies:
     body-parser "^1.18.2"
     connect "^3.6.5"
     connect-timeout "^1.9.0"
     debug "^3.1.0"
     jsonwebtoken "^8.1.0"
+    lvyii_cors_headers "^0.0.5"
     underscore "^1.8.3"
+
+lvyii_cors_headers@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.npmjs.org/lvyii_cors_headers/-/lvyii_cors_headers-0.0.5.tgz#1ee2996d939e8cd4b2fd8b17c2ff9e7328e896ec"
 
 media-typer@0.3.0:
   version "0.3.0"
