@@ -8,7 +8,20 @@ var LYAUTH = require('lvyii_auth')
 var callbackFuncs = require('./users')
 
 const appInfo = {
+  appName: 'Lvyii_Demo',
   secret: 'kuiox2sExuYy3lXzTWdef2lCuiw3IKEF',
+  serverURLs: {
+    api: 'http://localhost:16803'
+  },
+  media: 'redis',
+  mediaCfg: {
+    redis_url: '120.77.220.234',
+    redis_port: '6379',
+    redis_db: '12',
+    redis_auth: 'Simors2017',
+  },
+  verifyPhoneSmsTempId: '96732',
+  
   fetchUserById: callbackFuncs.getUserById,
   loginWithMobilePhone: callbackFuncs.loginWithMobilephone,
   loginWithUsername: callbackFuncs.loginWithUsername
